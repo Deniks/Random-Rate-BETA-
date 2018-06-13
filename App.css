@@ -1,0 +1,256 @@
+.debug {
+  position: absolute;
+  z-index: 3;
+  font-size: 3rem;
+  color: #880e4f;
+  background-color: #880e4f;
+  height: 100%;
+  width: 100%;
+}
+.debug h1 {
+  top: 0;
+  font-size: 2.5em;
+  color: #000;
+}
+.debug, .app, .ui .ui-root {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+html {
+  font-family: 'Lato', sans-serif;
+}
+input, button, submit {
+  border: none;
+}
+body {
+  display: block;
+  outline: none;
+  animation: 20s ease-in infinite colorGamma;
+}
+@keyframes colorGamma {
+  0% {
+    background-color: #00695c;
+  }
+  25% {
+    background-color: #004d40;
+  }
+  50% {
+    background-color: #004d4d;
+  }
+  75% {
+    background-color: #006569;
+  }
+  88% {
+    background-color: #005369;
+  }
+  100% {
+    background-color: #006965;
+  }
+}
+.root {
+  width: 100%;
+  height: 100%;
+  background-color: #fff;
+}
+.app {
+  width: 100%;
+  height: 100%;
+}
+.app .game {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+}
+.btn {
+  font-size: 8rem;
+  background-color: #fdd835;
+  border: none;
+  cursor: pointer;
+  transition: 0.5s;
+  color: #00695c;
+}
+.btn:hover {
+  background-color: #ffeb3b;
+  color: #004d40;
+}
+.integer {
+  font-size: 7rem;
+}
+.rate {
+  font-size: 6rem;
+}
+.statistics {
+  font-size: 3rem;
+}
+.notification {
+  z-index: 2;
+  position: absolute;
+  background-color: #fff;
+  width: 100%;
+  height: 100%;
+  font-size: 1.2rem;
+}
+.notification .text {
+  margin: auto;
+  width: 50%;
+  height: 100%;
+  line-height: 1.5;
+}
+.notification .close-btn {
+  border-radius: 4px;
+  color: #fff;
+  font-size: 2rem;
+  background-color: #880e4f;
+  border: none;
+  cursor: pointer;
+  bottom: 0;
+  transition: 0.3s;
+  position: relative;
+  left: 40%;
+}
+.notification .close-btn:hover {
+  box-shadow: inset 100px 0px 20px 10px #ff80ab;
+  color: #000;
+}
+.ui {
+  z-index: 1;
+  background-color: #000;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+}
+.ui .ui-root {
+  display: grid;
+  grid-template-columns: repeat(3, 200px);
+  grid-gap: 30px;
+  position: default;
+  top: 45%;
+}
+.ui .ui-root .sub-menu-wrapper {
+  display: none;
+}
+.ui .ui-root .sub-menu-wrapper .sub-menu {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  font-size: 3.5rem;
+  color: #880e4f !important;
+}
+.ui .ui-root .start-btn {
+  outline: none;
+  border: none;
+  background-color: #b71c1c;
+  font-size: 2rem;
+  color: #fff;
+  transition: 0.4s;
+  overflow: hidden;
+}
+.ui .ui-root .start-btn:hover {
+  cursor: pointer;
+  transform: scale(1.1);
+  color: #000;
+}
+code {
+  background-color: #e0e0e0;
+  border-radius: 2px;
+  padding: 2px;
+}
+.test {
+  background: #000;
+  color: #fff;
+  max-width: 100%;
+  max-height: 100%;
+  font-size: 8rem;
+}
+@media only screen and (max-width: 700px) {
+  .ui .ui-root {
+    grid-template-columns: repeat(1, 1fr);
+    grid-gap: 0;
+  }
+  .ui .ui-root .start-btn {
+    background-color: transparent;
+    font-size: 3rem;
+  }
+  .ui .ui-root .start-btn:hover {
+    transform: scale(1);
+    color: #fff;
+  }
+}
+@media only screen and (max-width: 600px) {
+  html {
+    font-size: 13px;
+  }
+  .notification {
+    font-size: 1.5rem;
+  }
+  .notification .text {
+    width: 75%;
+  }
+  .notification .close-btn {
+    font-size: 3.2rem;
+    width: 100%;
+    left: 0;
+    height: 20%;
+  }
+  .notification .close-btn:hover {
+    box-shadow: none;
+    color: #fff;
+  }
+}
+@media only screen and (max-width: 550px) {
+  .rate {
+    wrap-overflow: break-word;
+  }
+}
+@media only screen and (max-width: 460px) {
+  html {
+    font-size: 11px;
+  }
+  .notification {
+    font-size: 1.75rem;
+  }
+  .notification .text {
+    line-height: 1.35;
+  }
+  .notification .close-btn {
+    font-size: 2.9rem;
+  }
+}
+@media only screen and (max-width: 385px) {
+  html {
+    font-size: 10px;
+  }
+  .notification {
+    font-size: 2rem;
+  }
+  .notification .close-btn {
+    font-size: 3.2rem;
+    width: 100%;
+    left: 0;
+    height: 20%;
+  }
+  .notification .close-btn:hover {
+    box-shadow: none;
+    color: #fff;
+  }
+}
+@media only screen and (min-width: 600px) {
+  .debug code {
+    font-size: 0.7em;
+  }
+}
+/*
+ @media only screen and (orientation: landscape) {
+ #root {
+ display: none;
+ }
+ }
+ */
+.active {
+  transnition: 0.8s;
+  background-color: #fff;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  color: #880e4f;
+  padding: 0 auto;
+}
